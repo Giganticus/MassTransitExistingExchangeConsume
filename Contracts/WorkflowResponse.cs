@@ -1,9 +1,5 @@
-﻿using MassTransit;
+﻿namespace GettingStarted.Contracts;
 
-namespace GettingStarted.Contracts;
-
-//[ExcludeFromTopology]
-//[EntityName("my.existing.exchange")]
 public class WorkflowResponse
 {
     public Compass compass { get; set; }
