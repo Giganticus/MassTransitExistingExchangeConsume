@@ -31,6 +31,8 @@ namespace GettingStartedServer
                                 e.ConfigureConsumeTopology = false;
                                 e.UseRawJsonDeserializer(isDefault:true);
                                 e.UseNewtonsoftRawJsonDeserializer();
+                                e.UseRawJsonSerializer(isDefault:true);
+                                e.UseNewtonsoftRawJsonSerializer();
                             
                                 e.Consumer<CompassConsumer>();
                                 e.Bind("my.existing.exchange", configurator =>
