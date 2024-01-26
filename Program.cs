@@ -1,10 +1,10 @@
 using System.Threading.Tasks;
-using GettingStarted.Consumers;
-using Microsoft.Extensions.Hosting;
+using GettingStartedServer.Consumers;
 using MassTransit;
+using Microsoft.Extensions.Hosting;
 using RabbitMQ.Client;
 
-namespace GettingStarted
+namespace GettingStartedServer
 {
     public class Program
     {

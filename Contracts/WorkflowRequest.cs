@@ -1,4 +1,4 @@
-﻿namespace GettingStarted.Contracts;
+﻿namespace GettingStartedServer.Contracts;
 
 public class WorkflowRequest
 {

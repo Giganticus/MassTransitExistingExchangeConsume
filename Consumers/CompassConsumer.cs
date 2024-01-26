@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
-using GettingStarted.Contracts;
 using MassTransit;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
-namespace GettingStarted.Consumers;
+namespace GettingStartedServer.Consumers;
 
 public class CompassConsumer : IConsumer<JObject>
 {
