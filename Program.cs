@@ -12,7 +12,6 @@ namespace GettingStarted
         {
             await CreateHostBuilder(args).Build().RunAsync();
         }
-
         private static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((_, services) =>
@@ -31,6 +30,8 @@ namespace GettingStarted
                             {
                                 e.ConfigureConsumeTopology = false;
                                 e.UseRawJsonDeserializer(isDefault:true);
+                                e.UseNewtonsoftRawJsonDeserializer();
+                            
                                 e.Consumer<CompassConsumer>();
                                 e.Bind("my.existing.exchange", configurator =>
                                 {
@@ -40,7 +41,6 @@ namespace GettingStarted
                             });
                             
                             cfg.ConfigureEndpoints(context);
-                          
                         });
                     });
                 });
